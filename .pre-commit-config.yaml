@@ -1,0 +1,9 @@
+default_language_version:
+  python: python3.7
+exclude: ^(?!src/|tests/)
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+    -  id: flake8
+       args: ["--ignore=F401,F403,W503"]
