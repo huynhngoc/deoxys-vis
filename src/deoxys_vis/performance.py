@@ -10,7 +10,6 @@ using matplotlib
 """
 
 
-import pandas as pd
 import matplotlib.pyplot as plt
 from .utils import read_csv
 
