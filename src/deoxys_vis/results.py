@@ -39,13 +39,13 @@ def mask_prediction(output_path, image, true_mask, pred_mask,
     title : str, optional
         title of the diagram, by default 'Predicted'
     mask_levels : [type], optional
-        mask_levels when contouring the images, by default None
+        mask_levels when contouring the images, by default [0.5]
     channel : int, optional
         if the original image has multiple channels, this indicates
         which channel to plot the images, by default None
     """
     if not mask_levels:
-        mask_levels = 1
+        mask_levels = [0.5]
     kwargs = {}
     if not channel:
         if (len(image.shape) == 2
@@ -175,8 +175,6 @@ def plot_images_w_predictions(output_path, image, true_mask, pred_mask,
         a collection of predicted mask data
     title : str, optional
         title of the diagram, by default 'Predicted'
-    mask_levels : [type], optional
-        mask_levels when contouring the images, by default None
     channel : int, optional
         if the original image has multiple channels, this indicates
         which channel to plot the images, by default None
